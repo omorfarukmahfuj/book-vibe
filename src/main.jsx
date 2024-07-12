@@ -2,11 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Root from './components/Root';
+import Root from './Root';
 import App from './App';
-import ListedBooks from './components/ListedBooks';
-import PagesToRead from './components/PagesToRead';
-import ErrorPage from './components/ErrorPage';
+import ListedBooks from './pages/ListedBooks';
+import PagesToRead from './pages/PagesToRead';
+import ErrorPage from './pages/ErrorPage';
 
 const router = createBrowserRouter([
   {

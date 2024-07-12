@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 
-* {
+.font-work-sans {
   font-family: "Work Sans", sans-serif;
+}
+
+.font-playfair {
+  font-family: "Playfair", serif;
 }

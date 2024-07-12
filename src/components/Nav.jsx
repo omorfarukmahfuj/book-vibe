@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <nav className="navbar bg-base-100 p-0">
+    <nav className="navbar bg-base-100 p-0 font-work-sans">
       {/* Navbar Start */}
       <div className="navbar-start">
         <div className="dropdown">
@@ -30,7 +30,7 @@ const Nav = () => {
             <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal pl-0`}><NavLink className={({ isActive }) => isActive ? 'font-semibold bg-[#23BE0A] text-white' : 'text-#[131313CC]'} to="/extra-route-2">Extra Route</NavLink></li>
           </ul>
         </div>
-        <a className="text-[22px] md:text-[28px] font-bold break-normal mx-4">Book Vibe</a>
+        <a className="text-[22px] md:text-[28px] font-bold break-normal mx-4 md:ml-0 whitespace-nowrap ">Book Vibe</a>
       </div>
       {/* Navbar Center */}
       <div className="navbar-center hidden lg:flex">
