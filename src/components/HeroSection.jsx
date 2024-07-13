@@ -2,7 +2,7 @@ import heroCover from '../assets/images/heroCover.png'
 import { Link } from 'react-router-dom';
 const HeroSection = () => {
   return (
-    <header className="hero bg-[#1313130D] md:py-20 mt-3 md:px-[120px] md:mt-6 rounded-3xl mb-24">
+    <header className="hero bg-[#1313130D] md:py-20 mt-3 md:px-[120px] md:mt-6 rounded-3xl mb-10 md:mb-24">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <img src={heroCover} />
         <div>

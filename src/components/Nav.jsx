@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <nav className="navbar bg-base-100 p-0 font-work-sans">
+    <nav className="navbar bg-base-100 p-0">
       {/* Navbar Start */}
       <div className="navbar-start">
         <div className="dropdown">
