@@ -38,12 +38,12 @@ const Nav = () => {
           <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal`}><NavLink className={({ isActive }) => isActive ? 'font-semibold px-5 py-3 text-[#23BE0A] border border-[#23BE0A] rounded-lg' : 'px-5 py-2 text-#[131313CC]'} to="/">Home</NavLink></li>
           <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal`}><NavLink className={({ isActive }) => isActive ? 'font-semibold px-5 py-3 text-[#23BE0A] border border-[#23BE0A] rounded-lg' : 'px-5 py-2 text-#[131313CC]'} to="/listed-books">Listed Books</NavLink></li>
           <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal`}><NavLink className={({ isActive }) => isActive ? 'font-semibold px-5 py-3 text-[#23BE0A] border border-[#23BE0A] rounded-lg' : 'px-5 py-2 text-#[131313CC]'} to="/pages-to-read">Pages to Read</NavLink></li>
-          <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal`}><NavLink className={({ isActive }) => isActive ? 'font-semibold px-5 py-3 text-[#23BE0A] border border-[#23BE0A] rounded-lg' : 'px-5 py-2 text-#[131313CC]'} to="/extra-route-1">Extra Route</NavLink></li>
-          <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal`}><NavLink className={({ isActive }) => isActive ? 'font-semibold px-5 py-3 text-[#23BE0A] border border-[#23BE0A] rounded-lg' : 'px-5 py-2 text-#[131313CC]'} to="/extra-route-2">Extra Route</NavLink></li>
+          <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal`}><NavLink className={({ isActive }) => isActive ? 'font-semibold px-5 py-3 text-[#23BE0A] border border-[#23BE0A] rounded-lg' : 'px-5 py-2 text-#[131313CC]'} to="/about">About</NavLink></li>
+          <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal`}><NavLink className={({ isActive }) => isActive ? 'font-semibold px-5 py-3 text-[#23BE0A] border border-[#23BE0A] rounded-lg' : 'px-5 py-2 text-#[131313CC]'} to="/contacts">Contacts</NavLink></li>
         </ul>
       </div>
       {/* Navbar End */}
-      <div className="navbar-end gap-2 md:gap-4">
+      <div className="navbar-end gap-2 md:gap-4 ml-6">
         <a className="btn bg-[#23BE0A] hover:bg-success text-white">Sign In</a>
         <a className="btn bg-[#59C6D2] hover:bg-info text-white">Sign Up</a>
       </div>

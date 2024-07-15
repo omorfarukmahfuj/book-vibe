@@ -1,12 +1,36 @@
+import { Toaster } from 'sonner'
 import { useLoaderData, useParams } from "react-router-dom";
+import { useEffect } from 'react';
+import { addReadlist, addWishlist } from '../utilities/localstorage';
 
 const BookDetails = () => {
+
+  const handleReadList = () => {
+    addReadlist(bookId)
+  }
+  const handleWishlist = () => {
+    addWishlist(bookId)
+  }
+
+
+  useEffect(() => {
+    scrollTo(0, 0);
+
+  }, []);
+
+
   const books = useLoaderData();
   const { id } = useParams();
   const book = books.find(book => book.bookId === id)
-  const { bookName, image, tags, author, review, totalPages, publisher, yearOfPublishing, category, rating } = book;
+  console.log(book);
+  const { bookId, bookName, image, tags, author, review, totalPages, publisher, yearOfPublishing, category, rating } = book;
+
+
+
   return (
+
     <div className="flex flex-col md:flex-row items-center md:items-stretch justify-between gap-6 md:gap-12 my-6 md:my-12 md:h-screen">
+      <Toaster richColors />
       {/* Component Left */}
       <div className="p-10 md:p-20 bg-[#1313130D] rounded-2xl w-full md:w-2/4 flex justify-center items-center">
         <img className="h-5/6" src={image} alt={bookName} />
@@ -41,10 +65,10 @@ const BookDetails = () => {
           </div>
 
         </div>
-        <button className="btn bg-transparent hover:bg-success text-[#131313] hover:text-white mr-4 shadow-none border-[#1313134D] hover:border-none mt-8">Read</button>
-        <button className="btn bg-[#59C6D2] hover:bg-info text-white">Wishlist</button>
+        <button onClick={handleReadList} className="btn bg-transparent hover:bg-success text-[#131313] hover:text-white mr-4 shadow-none border-[#1313134D] hover:border-none mt-8">Read</button>
+        <button onClick={handleWishlist} className="btn bg-[#59C6D2] hover:bg-info text-white">Wishlist</button>
       </div>
-    </div>
+    </div >
   );
 };
 
