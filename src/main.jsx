@@ -8,6 +8,8 @@ import ListedBooks from './pages/ListedBooks';
 import PagesToRead from './pages/PagesToRead';
 import ErrorPage from './pages/ErrorPage';
 import BookDetails from './pages/BookDetails';
+import Contacts from './pages/Contacts';
+import About from './pages/About';
 
 const router = createBrowserRouter([
   {
@@ -35,11 +37,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/about',
-        element: <BookDetails />,
+        element: <About />,
       },
       {
         path: '/contacts',
-        element: <BookDetails />,
+        element: <Contacts />,
       },
     ]
   }

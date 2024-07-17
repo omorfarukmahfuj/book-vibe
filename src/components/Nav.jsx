@@ -22,12 +22,14 @@ const Nav = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            className="menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow flex-col">
             <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal pl-0`}><NavLink className={({ isActive }) => isActive ? 'font-semibold bg-[#23BE0A] text-white' : 'text-#[131313CC]'} to="/">Home</NavLink></li>
             <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal pl-0`}><NavLink className={({ isActive }) => isActive ? 'font-semibold bg-[#23BE0A] text-white' : 'text-#[131313CC]'} to="/listed-books">Listed Books</NavLink></li>
             <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal pl-0`}><NavLink className={({ isActive }) => isActive ? 'font-semibold bg-[#23BE0A] text-white' : 'text-#[131313CC]'} to="/pages-to-read">Pages to Read</NavLink></li>
-            <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal pl-0`}><NavLink className={({ isActive }) => isActive ? 'font-semibold bg-[#23BE0A] text-white' : 'text-#[131313CC]'} to="/extra-route-1">Extra Route</NavLink></li>
-            <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal pl-0`}><NavLink className={({ isActive }) => isActive ? 'font-semibold bg-[#23BE0A] text-white' : 'text-#[131313CC]'} to="/extra-route-2">Extra Route</NavLink></li>
+            <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal pl-0`}><NavLink className={({ isActive }) => isActive ? 'font-semibold bg-[#23BE0A] text-white' : 'text-#[131313CC]'} to="/about">About</NavLink></li>
+            <br />
+            <li className={`btn bg-transparent border-none shadow-none hover:bg-transparent text-base font-normal pl-0`}><NavLink className={({ isActive }) => isActive ? 'font-semibold bg-[#23BE0A] text-white' : 'text-#[131313CC]'} to="/contacts">Contacts</NavLink></li>
+
           </ul>
         </div>
         <a className="text-[22px] md:text-[28px] font-bold break-normal mx-4 md:ml-0 whitespace-nowrap ">Book Vibe</a>
