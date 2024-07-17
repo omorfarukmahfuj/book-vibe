@@ -1,22 +1,33 @@
 import { toast } from 'sonner'
 
-const getReadlist = () => {
-  const readlist = localStorage.getItem('books');
-  if (readlist) {
-    return JSON.parse(readlist);
+const getReadBooks = () => {
+  const readBooks = localStorage.getItem('books');
+  if (readBooks) {
+    return JSON.parse(readBooks);
   }
   return [];
 }
 
-const addReadlist = id => {
-  const readlist = getReadlist();
-  const exist = readlist.find(book => book === id);
-  if (exist) {
-    return toast.error('Already added to Reading list!');
+const addReadBooks = id => {
+  const readBooks = getReadBooks();
+  let wishlist = getWishlist();
+
+  const existRead = readBooks.find(book => book === id);
+  const existWish = wishlist.find(book => book === id);
+
+  if (existRead) {
+    return toast.error('Already Added To Read Books!');
+  } else if (existWish) {
+    wishlist = wishlist.filter(bookId => bookId !== id);
+    localStorage.setItem('wish', JSON.stringify(wishlist));
+    readBooks.push(id);
+    localStorage.setItem('books', JSON.stringify(readBooks));
+    toast.success('Added To Read Books Successfully!');
+  } else {
+    readBooks.push(id);
+    localStorage.setItem('books', JSON.stringify(readBooks));
+    toast.success('Added To Read Books Successfully!');
   }
-  readlist.push(id);
-  localStorage.setItem('books', JSON.stringify(readlist));
-  toast.success('Book added to Reading list successfully!');
 }
 
 const getWishlist = () => {
@@ -28,21 +39,21 @@ const getWishlist = () => {
 }
 
 const addWishlist = id => {
-  const readlist = getReadlist();
+  const readBooks = getReadBooks();
   const wishlist = getWishlist();
 
-  const existRead = readlist.find(book => book === id);
+  const existRead = readBooks.find(book => book === id);
   const existWish = wishlist.find(book => book === id);
 
   if (existRead) {
-    return toast.error('Already added to Reading list!');
+    return toast.error('Already Added To Read Books!');
   } else if (existWish) {
-    return toast.error('Already added to Wishlist!');
+    return toast.error('Already Added To Wishlist!');
   } else {
     wishlist.push(id);
     localStorage.setItem('wish', JSON.stringify(wishlist));
-    toast.success('Book added to Wishlist successfully!');
+    toast.success('Added To Wishlist Successfully!');
   }
 }
 
-export { addReadlist, addWishlist };
+export { getReadBooks, getWishlist, addReadBooks, addWishlist };
