@@ -39,7 +39,6 @@ const ListedBooks = () => {
   };
 
   const filteredBooks = (tabIndex === 0) ? sortedBooks.filter(book => bookmarked.includes(book.bookId)) : sortedBooks.filter(book => wishlisted.includes(book.bookId));
-  console.log(filteredBooks);
   return (
     <div className="w-11/12 mx-auto mt-10">
       <div className="bg-[#F3F3F3] text-center py-16 rounded-2xl">
